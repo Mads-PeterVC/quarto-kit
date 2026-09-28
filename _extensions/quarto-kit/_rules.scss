@@ -1,0 +1,228 @@
+:root {
+  --kit-accent: #{$kit-accent};
+  --kit-accent-strong: #{$kit-accent-strong};
+  --kit-muted: #{$kit-muted};
+  --kit-surface: #{$kit-surface};
+  --kit-surface-raised: #{$kit-surface-raised};
+  --kit-border: #{$kit-border};
+}
+
+.reveal {
+  font-variation-settings: "opsz" 32;
+  letter-spacing: -0.012em;
+}
+.reveal .slides { text-align: left; }
+.reveal .slides section,
+.reveal .slides section > section {
+  box-sizing: border-box;
+  padding: 0.35em 0.15em;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  margin-bottom: 0.55em;
+  text-wrap: balance;
+}
+.reveal h2 {
+  position: relative;
+  padding-bottom: 0.28em;
+}
+.reveal h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1.35em;
+  height: 0.09em;
+  border-radius: 999px;
+  background: linear-gradient(90deg, $kit-accent, $kit-accent-strong);
+}
+.reveal p,
+.reveal li { max-width: 52ch; }
+.reveal li + li { margin-top: 0.22em; }
+.reveal strong { font-weight: 680; }
+.reveal a {
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.14em;
+}
+.reveal a:focus-visible,
+.reveal button:focus-visible,
+.reveal [tabindex]:focus-visible {
+  outline: 0.12em solid $kit-focus;
+  outline-offset: 0.12em;
+  border-radius: 0.08em;
+}
+
+.reveal .title-slide {
+  position: relative;
+  padding-left: 0.3em;
+}
+.reveal .title-slide::before {
+  content: "";
+  display: block;
+  width: 2.4em;
+  height: 0.14em;
+  margin-bottom: 0.8em;
+  border-radius: 999px;
+  background: linear-gradient(90deg, $kit-accent, $kit-accent-strong);
+}
+.reveal .title-slide .title {
+  max-width: 12ch;
+  margin-bottom: 0.18em;
+  font-size: 2.65em;
+  font-weight: 720;
+  letter-spacing: -0.052em;
+}
+.reveal .title-slide .subtitle {
+  max-width: 34ch;
+  margin-bottom: 1.2em;
+  color: $kit-muted;
+  font-size: 1.05em;
+  line-height: 1.35;
+}
+.reveal .title-slide .quarto-title-author-name,
+.reveal .title-slide .date,
+.reveal .title-slide .institute {
+  color: $kit-muted;
+  font-size: 0.72em;
+}
+
+.reveal .section-title,
+.reveal section.section-title,
+.reveal .closing-slide,
+.reveal section.closing-slide {
+  min-height: 72%;
+}
+.reveal .slides section.section-title.present,
+.reveal .slides section.closing-slide.present {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reveal .section-title h2,
+.reveal section.section-title h2 { max-width: 15ch; font-size: 2.15em; }
+.reveal .closing-slide h2,
+.reveal section.closing-slide h2 { font-size: 2.3em; }
+.reveal .closing-slide h2::after,
+.reveal section.closing-slide h2::after { width: 2.5em; }
+
+.reveal blockquote {
+  width: auto;
+  margin: 1em 0;
+  padding: 0.7em 0.9em 0.7em 1.15em;
+  border: 1px solid $kit-border;
+  border-left: 0.18em solid $kit-accent-strong;
+  border-radius: 0.18em;
+  background: $kit-surface;
+  box-shadow: none;
+  color: inherit;
+  font-style: normal;
+}
+.reveal blockquote p { margin: 0; }
+.reveal code {
+  border-radius: 0.2em;
+  font-family: $font-family-monospace;
+  font-variant-ligatures: contextual;
+  letter-spacing: -0.02em;
+}
+.reveal :not(pre) > code {
+  padding: 0.08em 0.28em;
+  border: 1px solid $kit-border;
+  background: $code-bg;
+  color: $code-color;
+  font-size: 0.8em;
+}
+.reveal div.sourceCode,
+.reveal pre {
+  border: 1px solid $code-block-border-color;
+  border-radius: 0.32em;
+  background: $code-block-bg;
+  box-shadow: none;
+}
+.reveal pre code {
+  max-height: 510px;
+  padding: 0.85em 1em;
+  color: $kit-code-fg;
+  font-size: 0.69em;
+  line-height: 1.45;
+}
+
+.reveal table {
+  width: 100%;
+  margin: 0.85em 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.78em;
+}
+.reveal table th {
+  border-top: 1px solid $kit-border;
+  border-bottom: 2px solid $kit-accent;
+  background: $kit-surface-raised;
+  color: inherit;
+  font-weight: 650;
+}
+.reveal table th,
+.reveal table td { padding: 0.48em 0.62em; border-left: 0; border-right: 0; }
+.reveal table td { border-bottom: 1px solid $kit-border; }
+.reveal .figure,
+.reveal figure { margin: 0.6em 0; }
+.reveal figcaption,
+.reveal .figure-caption,
+.reveal .table-caption {
+  margin-top: 0.45em;
+  color: $kit-muted;
+  font-size: 0.62em;
+  line-height: 1.35;
+}
+.reveal .columns { gap: 1.1em; }
+
+.reveal .callout {
+  margin: 0.8em 0;
+  border-width: 0 0 0 0.16em;
+  border-radius: 0.18em;
+  background: $kit-surface;
+  box-shadow: none;
+  font-size: 0.75em;
+}
+.reveal .callout .callout-header { background: $kit-surface-raised; font-weight: 650; }
+.reveal .callout-note { border-left-color: $kit-info; }
+.reveal .callout-tip { border-left-color: $kit-success; }
+.reveal .callout-warning { border-left-color: $kit-warning; }
+.reveal .callout-important,
+.reveal .callout-caution { border-left-color: $kit-danger; }
+
+.reveal .progress { height: 0.1em; color: $kit-accent; }
+.reveal .slide-number {
+  right: 1.1em;
+  bottom: 0.8em;
+  padding: 0;
+  background: transparent;
+  color: $kit-muted;
+  font-family: $font-family-monospace;
+  font-size: 0.42em;
+}
+.reveal .controls { color: $kit-accent; }
+
+.reveal .accent { color: $kit-accent; }
+.reveal .accent-strong { color: $kit-accent-strong; }
+.reveal .muted { color: $kit-muted; }
+.reveal .compact { font-size: 0.78em; line-height: 1.32; }
+.reveal .centered {
+  display: grid;
+  min-height: 70%;
+  place-content: center;
+  text-align: center;
+}
+.reveal .centered > * { margin-right: auto; margin-left: auto; }
+.reveal .panel {
+  padding: 0.7em 0.85em;
+  border: 1px solid $kit-border;
+  border-radius: 0.3em;
+  background: $kit-surface;
+}
+.reveal .bordered {
+  padding: 0.5em 0.65em;
+  border: 1px solid $kit-border;
+  border-radius: 0.24em;
+}

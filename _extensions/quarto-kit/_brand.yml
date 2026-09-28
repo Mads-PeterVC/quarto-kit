@@ -1,0 +1,44 @@
+meta:
+  name: Quarto Kit
+
+color:
+  palette:
+    violet: "#6d28d9"
+    magenta: "#b42375"
+    ink: "#201c2b"
+    paper: "#f8f7fc"
+    success-green: "#177245"
+    warning-amber: "#9a5b00"
+    danger-red: "#b42335"
+  background: { light: "#f8f7fc", dark: "#14111c" }
+  foreground: { light: "#201c2b", dark: "#f4f1fa" }
+  primary: { light: "#6d28d9", dark: "#c4b5fd" }
+  secondary: { light: "#b42375", dark: "#f472b6" }
+  tertiary: { light: "#655f70", dark: "#b8b0c7" }
+  success: { light: "#177245", dark: "#6ee7a8" }
+  info: { light: "#3056a6", dark: "#93b4ff" }
+  warning: { light: "#9a5b00", dark: "#f6c453" }
+  danger: { light: "#b42335", dark: "#ff8b9a" }
+  light: "#f8f7fc"
+  dark: "#14111c"
+  link: { light: "#6d28d9", dark: "#d0c5ff" }
+
+typography:
+  fonts:
+    - family: Inter
+      source: file
+      files:
+        - fonts/InterVariable.woff2
+        - fonts/InterVariable-Italic.woff2
+    - family: JetBrains Mono
+      source: file
+      files:
+        - fonts/JetBrainsMono-Variable.woff2
+        - fonts/JetBrainsMono-Variable-Italic.woff2
+  base: { family: Inter, line-height: 1.45, weight: 400 }
+  headings: { family: Inter, weight: 650, line-height: 1.08 }
+  monospace: { family: JetBrains Mono, weight: 450 }
+  monospace-inline: { family: JetBrains Mono, weight: 500 }
+  monospace-block: { family: JetBrains Mono, weight: 450, line-height: 1.45 }
+  link: { weight: 550, decoration: underline }
+
