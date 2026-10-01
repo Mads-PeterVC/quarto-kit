@@ -39,6 +39,39 @@ format:
     transition: none
 ```
 
+## Chapter progress
+
+The Reveal.js formats can show the current level-one section and progress through
+its level-two slides. Enable the bundled indicator with top-level metadata and use
+`slide-level: 2` so Quarto groups each section into a vertical slide stack:
+
+```yaml
+---
+title: "Presentation title"
+chapter-progress: true
+format:
+  quarto-kit-revealjs:
+    slide-level: 2
+    navigation-mode: vertical
+    progress: false
+---
+```
+
+```markdown
+# First topic
+
+## First slide
+
+## Second slide
+
+# Next topic
+
+## Another slide
+```
+
+The option is off by default. The standard deck-wide Reveal.js progress bar is
+independent; set `progress: false` when the chapter indicator should replace it.
+
 ## Utility classes
 
 | Class | Purpose |

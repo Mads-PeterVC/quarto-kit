@@ -3,3 +3,6 @@
 template-light.html
 template-dark.html
 
+
+/.quarto/
+**/*.quarto_ipynb

@@ -27,3 +27,5 @@ contributes:
       code-line-numbers: false
       fig-cap-location: bottom
       tbl-cap-location: bottom
+      filters:
+        - ../quarto-kit/chapter-progress.lua
